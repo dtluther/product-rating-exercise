@@ -1,12 +1,13 @@
 class ReviewsController < ApplicationController
-  # may not need, this will show up on product#show
-  # def index
-  #   @reviews = Review.all
-  #   json_response(@reviews)
-  # end
+  def index
+    @product = Product.find(params[:product_id])
+    @reviews = @product.reviews
+    json_response(@reviews)
+  end
 
   def create
-    @review = Review.create!(review_params)
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.create!(review_params)
     json_response(@review)
   end
 
@@ -18,7 +19,6 @@ class ReviewsController < ApplicationController
       :rating,
       :headline,
       :body,
-      :product_id
     )
   end
 end

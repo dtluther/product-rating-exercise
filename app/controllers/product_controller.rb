@@ -1,7 +1,8 @@
 class ProductController < ApplicationController
   def index
-    @products = Product.all
-    json_response(@products)
+    @products = Product.all.includes(:reviews)
+    sorted_by_num_reviews = @products.sort_by(&:average_rating).reverse
+    json_response(sorted_by_num_reviews)
   end
 
   def show

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_22_071832) do
+ActiveRecord::Schema.define(version: 2020_12_22_191129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_12_22_071832) do
     t.integer "rating", null: false
     t.string "headline", null: false
     t.text "body"
-    t.bigint "product_id", null: false
+    t.string "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["product_id"], name: "index_reviews_on_product_id"
