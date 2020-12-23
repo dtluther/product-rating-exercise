@@ -12,6 +12,8 @@
     - body: text (optional)
 
 
+-----
+## Original Prompt
 Please fork this repository and use it to solve the following problem: given a simple product catalog API, add the ability to rate products, to see product ratings, and to list products by rating.
 
 This repository provides a starting point for a Ruby on Rails implementation.  You are welcome to use a different toolset if you prefer, please see below.
