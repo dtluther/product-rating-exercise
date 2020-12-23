@@ -10,6 +10,8 @@
     - rating: integer between 1 and 5 (REQUIRED)
     - headline: string less than 120 chars (REQUIRED)
     - body: text (optional)
+  - Example photo of a this API call on Postman:
+    ![Example Post Request](readme_assets/postman_create_review.png)
 
 
 -----
